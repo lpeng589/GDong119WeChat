@@ -1,0 +1,59 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/home/home",
+    "pages/user/user",
+    "pages/addevent/addevent",
+    "pages/userinfo/userinfo",
+    "pages/eventdetail/eventdetail",
+    "pages/callpolice/callpolice",
+    "pages/alarmdetail/alarmdetail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#1E90FF",
+    "navigationBarTitleText": "广东119",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh":true,
+
+
+    
+    "backgroundColor":"#DCDCDC"
+  },
+  "tabBar": {
+    "color": "#888",
+    "selectedColor": "#000",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "image/pat/home.png",
+        "selectedIconPath": "image/pat/home2.png"
+      },
+      {
+        "pagePath": "pages/addevent/addevent",
+        "text": "随手拍",
+        "iconPath": "image/pat/zxj.png",
+        "selectedIconPath": "image/pat/zxj2.png"
+      },
+      {
+        "pagePath": "pages/callpolice/callpolice",
+        "text": "119报警",
+        "iconPath": "image/119.png",
+        "selectedIconPath": "image/1192.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "image/pat/my.png",
+        "selectedIconPath": "image/pat/my2.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 7000,
+    "downloadFile": 10000
+  }
+}

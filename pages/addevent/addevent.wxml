@@ -1,0 +1,72 @@
+<form bindsubmit="addevent" report-submit="true">
+<!-- 类型选择 -->
+  <picker bindchange="bindPickerChange" value="{{picker_index}}" range="{{array}}" name="picker">
+    <view class="picker">
+      类型选择：
+      <text class="t_picker">{{array[picker_index]}}</text>
+    </view>
+  </picker>
+  <view class="jubao">
+  <input placeholder="请输入举报对象（可不填）" value="{{jubao}}" name="jubao"/>
+</view>
+  <textarea class="content" bindinput="bindTextareaChange" auto-height maxlength="-1" placeholder="我想说点什么..." placeholder-class="p_content" value="{{content}}" name="content"/>
+  <view class="media">
+    <!-- 视频 -->
+    <video id="myvideo" class="{{isplay?'current_video':'hide_camera'}}" src="{{play_video}}" bindended="endvideo" bindfullscreenchange="fullscreenchange"></video>
+    <view wx:if="{{src_video}}" class="video back_video" bindtap="playvideo">
+      <image class="play_video" src="../../image/pat/play_video.png"></image>
+    </view>
+    <view wx:else class="video" bindtap="selectvideo">
+      <image class="pat_video" src="../../image/pat/pat_video.png"></image>
+    </view>
+    <!-- 录音 -->
+    <view wx:if="{{audio_state == 0}}" class="audio" bindtap="startaudio">
+      <image class="icon_audio" src="../../image/pat/voice.png"></image>
+    </view>
+    <view wx:elif="{{audio_state == 1}}" class="box" bindtap="endaudio">
+      <view class="dh1">
+			  <view class="dh2">
+          <view class="icon">
+            <image class="dh_voice" mode="scaleToFill" src="../../image/pat/voice.png"></image>
+          </view>
+			  </view>
+			</view>
+    </view>
+    <view wx:elif="{{audio_state == 2}}" class="audio stop" bindtap="playaudio">
+      <image class="icon_audio" src="../../image/pat/voice.png"></image>
+    </view>
+    <view wx:else class="box" bindtap="stopaudio">
+      <view class="dh1">
+			  <view class="dh2">
+          <view class="icon">
+            <image class="dh_voice" mode="scaleToFill" src="../../image/pat/voice.png"></image>
+          </view>
+			  </view>
+			</view>
+    </view>
+
+    <!-- 拍照 -->
+    <view class="{{imgurls.length == 3 ? 'hide_camera' : 'camera'}}" bindtap="selectimage">
+      <image class="icon_camera" src="../../image/pat/add.png"></image>
+    </view>
+    <view class="line"></view>
+
+    <!-- 照片预览 -->
+    <block wx:for="{{imgurls}}">
+      <view class="{{index == 1 ? 'sudoku second' : 'sudoku'}}">
+        <image class="sudoku_image" src="{{item}}" mode="aspectFill" data-url="{{item}}" bindtap="showimgurl"></image>
+        <image class="cc" src="../../image/pat/cc.png" mode="aspectFill" data-id="{{index}}" bindtap="delimage"></image>
+      </view>
+    </block>
+  </view>
+  <view class="line"></view>
+  <!-- 地址 -->
+  <view class="address" bindtap="updateaddress">
+    <image class="icon_address" src="../../image/pat/map.png" mode="aspectFill"></image>
+    <text class="text_address">{{address}}</text><text class="addresssm">(点击可编辑)</text>
+  </view>
+  <view class="oper">
+    <button class="oper_cancel" bindtap="clearForm">清空</button>
+    <button class="oper_confirm" formType="submit">提交</button>
+  </view>
+</form>

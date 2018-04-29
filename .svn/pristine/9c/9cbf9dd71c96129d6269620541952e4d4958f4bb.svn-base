@@ -1,0 +1,58 @@
+<view wx:if="{{img_data.length > 0}}" class="header">
+  <swiper class="swiper" indicator-dots="true" autoplay="true" circular="true"      bindchange="swiperChange">
+   <!--  <block wx:for="{{img_data}}">     -->
+    <block >
+      <swiper-item>
+       <!--  <image class="swiper_image" src="{{img_url + item.linkurl}}" mode="aspectFill"/> -->
+       <image class="swiper_image" src="../../image/lunbo/pic1.png" mode="aspectFill"/> 
+      </swiper-item>
+      <swiper-item>
+       <!--  <image class="swiper_image" src="{{img_url + item.linkurl}}" mode="aspectFill"/> -->
+       <image class="swiper_image" src="../../image/lunbo/pic2.png" mode="aspectFill"/> 
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class="content">
+  <view wx:if="{{event_data.length > 0}}">
+    <view class="item" wx:for="{{event_data}}" bindtap="eventdetail" data-id="{{item.id}}">
+      <view class="top">
+        <image class="user_icon" src="{{item.headimgurl}}" mode="aspectFill"></image>
+        <view class="top_content">
+          <view class="phone">{{item.phone}}</view>
+          <view class="top_time">
+<image class="icon_time" src="../../image/pat/clock.png" mode="aspectFill"></image>
+          <text class="time">{{item.inserttime2}}</text>
+         <!-- <text wx:if="{{item.type==1}}" class="time">类型：无消防手续</text>
+          <text wx:if="{{item.type==2}}" class="time">类型：安全出口数量不足</text>
+          <text wx:if="{{item.type==3}}" class="time">类型：安全出口、疏散通道被占用、堵塞</text>
+          <text wx:if="{{item.type==4}}" class="time">类型：消防车通道被占用、堵塞</text>
+          <text wx:if="{{item.type==5}}" class="time">类型：消防设施器材损坏</text>
+          <text wx:if="{{item.type==6}}" class="time">类型：外墙门窗上设置影响逃生、灭火救援的障碍物</text>
+          <text wx:if="{{item.type==7}}" class="time">类型：消防产品不合格</text>
+          <text wx:if="{{item.type==8}}" class="time">类型：燃气、电气线路数设不安全</text>
+          <text wx:if="{{item.type==9}}" class="time">类型：违章动火</text>
+          <text wx:if="{{item.type==10}}" class="time">类型：违规存储易燃易爆危险品</text>
+          <text wx:if="{{item.type==11}}" class="time">类型：其它消防违法行为和火灾隐患</text>-->
+          </view>
+        </view>
+      </view>
+      <view class="middle">
+        <image wx:if="{{item.pic1}}" class="m_image" src="{{item.pic1}}" mode="aspectFill"></image>
+        <image wx:if="{{item.pic2}}" class="m_image" src="{{item.pic2}}" mode="aspectFill"></image>
+        <image wx:if="{{item.pic3}}" class="m_image" src="{{item.pic3}}" mode="aspectFill"></image>
+        <view class="m_content">{{item.content}}</view>
+      </view>
+      <view class="bottom">
+        <image class="icon_address" src="../../image/pat/map.png" mode="aspectFit"></image>
+        <text class="b_address">{{item.address}}</text>
+        <!-- <text class="b_text">查看详情</text> -->
+      </view>
+    </view>
+    <view class="{{buttom ? 'buttom' : 'hide'}}">{{buttom}}</view>
+  </view>
+  <view wx:else>
+    <image class="icon_camera" src="../../image/pat/camerabg.png" mode="aspectFit" bindtap="addevent"></image>
+    <view class="p_text">随手拍无内容</view>
+  </view>
+</view>

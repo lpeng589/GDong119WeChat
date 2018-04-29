@@ -1,0 +1,30 @@
+<view class="content">
+  <view class="header">
+    头像<image class="headimgurl" src="{{userinfo.headimgurl}}"   mode="aspectFit"></image>
+    <view class="b_line"></view>
+  </view>
+  <view class="info">
+    姓名 <text class="value">{{userinfo.name}}</text>
+    <view class="b_line"></view>
+  </view>
+  <view class="info">
+    性别 <text class="value">{{userinfo.sign_sex}}</text>
+    <view class="b_line"></view>
+  </view>
+  <view class="info">
+    手机号 <text class="value">{{userinfo.phone}}</text>
+  </view>
+</view>
+<view class="content">
+  <view class="info">
+    证件类型 <text class="value">{{userinfo.cardtype}}</text>
+    <view class="b_line"></view>
+  </view>
+  <view class="info">
+    证件号码 <text class="value">{{userinfo.cardid}}</text>
+    <view class="b_line"></view>
+  </view>
+  <view class="info">
+    证件有效期 <text class="value">{{userinfo.cardtime}}</text>
+  </view>
+</view>

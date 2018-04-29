@@ -1,0 +1,66 @@
+<view class="mask {{other}}" catchtap="showbig">
+    <image class="bigimage" src="{{src}}"></image>
+</view>
+<view class="{{container}}">
+    <!--<view wx:if="{{array==''}}" class="tip {{text_class}}">警局已收到你的报警信息，</view>-->
+    <view class="address_main">
+    <image class="img_small" src="../../image/location.png" bindtap="updateaddress"></image>
+    <text class="inline address" bindtap="updateaddress">{{address}}</text>
+    <image class="img_small {{zhuan}} refresh"  src="../../image/refresh.png" style=" transform-origin:50% 50%;transform:rotateZ({{zhuan}}deg);transition:transform 2s;" bindtap="getaddress"></image>
+    </view>
+    <view class="list {{hide}}">
+        <view wx:for="{{array}}" id="{{index}}">
+            <view class="contect_time" style="text-align: center;font-size:15px;">{{item.insertTime}}</view>
+
+<view wx:if="{{item.sendtype==0}}" style="display:flex;flex-direction:row-reverse;margin-top:4px;margin-bottom:4px;">
+            <view class="inline top"><image src="../../image/user.png" class="contect_img"></image></view>
+            <view class="contect_right inline">
+                <view wx:if="{{item.type==0}}" class="text">{{item.content}}</view>
+                <view wx:if="{{item.type==1}}" class="voice">
+                    <image class="img_middle  inline" src="../../image/{{voiceimg}}" bindtap="voice" data-src="{{item.content}}" data-id="{{item.id}}"></image>
+                    <image class="inline voice_all" src="../../image/voice_all.png"></image>
+                    <image class="inline voice_all" src="../../image/voice_all.png"></image>
+                    <image class="inline voice_all" src="../../image/voice_all.png"></image>
+                </view>
+                <view wx:if="{{item.type==2}}" class="video"><video class="video_play" src="{{item.content}}"></video></view>
+                <view wx:if="{{item.type==3}}" class="content_img">
+                    <image src="{{item.content}}" class="img" catchtap="showbig" data-src="{{item.content}}"></image>
+                </view>
+                <view wx:if="{{item.type==4}}" class="text">当前位置：{{item.content}}</view>
+            </view>
+ </view>
+
+<view wx:if="{{item.sendtype==1}}" style="margin-top:4px;margin-bottom:4px;">
+            <view class="inline top"><image src="../../image/zc.png" class="contect_img"></image></view>
+            <view class="contect_right inline" style="background-color:white;color: black;">
+                <view wx:if="{{item.type==0}}" class="text">{{item.content}}</view>
+                <view wx:if="{{item.type==1}}" class="voice">
+                    <image class="img_middle  inline" src="../../image/{{voiceimg}}" bindtap="voice" data-src="{{item.content}}" data-id="{{item.id}}"></image>
+                    <image class="inline voice_all" src="../../image/voice_all.png"></image>
+                    <image class="inline voice_all" src="../../image/voice_all.png"></image>
+                    <image class="inline voice_all" src="../../image/voice_all.png"></image>
+                </view>
+                <view wx:if="{{item.type==2}}" class="video"><video class="video_play" src="{{item.content}}"></video></view>
+                <view wx:if="{{item.type==3}}" class="content_img">
+                    <image src="{{item.content}}" class="img" catchtap="showbig" data-src="{{item.content}}"></image>
+                </view>
+                <view wx:if="{{item.type==4}}" class="text">当前位置：{{item.content}}</view>
+            </view>
+ </view>
+
+
+
+        </view>
+    </view>
+    <view class="footer">
+        <view class="menu">
+        <image src="{{pic_img}}" class="footer_img" bindtap="uploadpic"></image>
+        <image src="{{video_img}}" class="footer_img" bindtap="uploadvideo"></image>
+        <image src="{{voice_img}}" class="footer_img" bindtap="{{voice_bth}}"></image>
+        <image src="../../image/call.png" class="footer_img" bindtap="call"></image>
+        </view>
+        <view class="footer_2">
+        <input type="text" class="footer_text" bindinput="contentinput" value="{{text}}" placeholder="请输入详尽信息如线索、联系方式等"/>
+        <button class="footer_bth" bindtap="sendtext">发送</button></view>
+    </view>
+</view> 

@@ -1,0 +1,8 @@
+https://www.startssl.com/
+1、个人注册
+2、域名验证
+3、用openssl 生成key和csr文件（生成的时候hostname要写对应域名）
+4、在Decrypt Private Key添入key内容生成new key
+5、在SSL Certificate添入csr内容生成crt文件
+6、用crt、new key文件生成keystore
+7、配置tomcat

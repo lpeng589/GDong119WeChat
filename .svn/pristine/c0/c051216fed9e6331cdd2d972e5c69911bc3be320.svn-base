@@ -1,0 +1,231 @@
+page {
+  overflow-x: hidden;
+  background-color: #fff;
+  font-family: 'PingFang-SC-Regular';
+}
+.content {
+  position: relative;
+  padding: 20rpx;
+  margin-top: 20rpx;
+  line-height: 30rpx;
+  min-height: 210rpx;
+  width: 710rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+.addresssm {
+  float: left;
+  font-size: 26rpx;
+  margin:15rpx 20rpx 15rpx 0rpx;
+}
+.p_content {
+  font-size: 30rpx;
+  color: #b7b7b7;
+}
+.media {
+  position: relative;
+  padding: 0 20rpx;
+}
+.video {
+  position: relative;
+  float: left;
+  margin-bottom: 20rpx;
+  width: 220rpx;
+  height: 220rpx;
+  background-color: #eee;
+}
+.back_video {
+  background-color: #333;
+}
+.current_video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.pat_video {
+  width: 128rpx;
+  height: 80rpx;
+  margin: 70rpx 46rpx;
+}
+.play_video {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 60rpx;
+}
+.audio {
+  float: left;
+  margin-bottom: 20rpx;
+  margin: 0 25rpx;
+  width: 220rpx;
+  height: 220rpx;
+  background-color: #eee;
+}
+.active {
+  background-color: #a91c1c;
+}
+.stop {
+  background-color: #333;
+}
+.play {
+  background-color: #000;
+}
+.icon_audio {
+  width: 110rpx;
+  height: 170rpx;
+  margin: 25rpx 55rpx;
+}
+.camera {
+  float: left;
+  margin-bottom: 20rpx;
+  width: 216rpx;
+  height: 216rpx;
+  border: 1rpx dashed #c1c1c1;
+}
+.hide_camera {
+  display: none;
+}
+.icon_camera {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 58rpx;
+}
+.line {
+  position: relative;
+  width: 100%;
+  clear: both;
+  height: 0;
+}
+.address {
+  position: relative;
+  left: 20rpx;
+  top: 20rpx;
+  height: 60rpx;
+  background-color: #c7c7c7;
+  border-radius: 40rpx;
+  display: inline-block;
+}
+.icon_address {
+  float:left;
+  width: 26rpx;
+  height: 32rpx;
+  margin:14rpx 0 14rpx 20rpx;
+}
+.text_address {
+  float: left;
+  font-size: 26rpx;
+  color: #fff;
+  margin:15rpx 0rpx 15rpx 10rpx;
+}
+.oper {
+  position: relative;
+  font-size: 36rpx;
+  margin: 100rpx 20rpx 0 20rpx;
+  display: flex;
+}
+.oper_cancel {
+  width: 340rpx;
+  color: #000;
+  background-color: #eee;
+  border-radius: 10rpx;
+  margin-right:30rpx;
+}
+.oper_confirm {
+  color: #dfdfdf;
+  width: 340rpx;
+  background-color: #1E90FF;
+  border-radius: 10rpx;
+}
+.sudoku {
+  position: relative;
+  width: 220rpx;
+  height: 220rpx;
+  margin-bottom: 20rpx;
+  display: inline-block;
+}
+.second {
+  margin: 0 25rpx;
+}
+.sudoku_image {
+  width: 220rpx;
+  height: 220rpx;
+}
+.cc {
+  position: absolute;
+  top: -10rpx;
+  right: -10rpx;
+  width: 38rpx;
+  height: 38rpx;
+}
+.box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  float: left;
+  margin-bottom: 20rpx;
+  margin: 0 25rpx;
+  width: 220rpx;
+  height: 220rpx;
+  background-color: #333;
+}
+.dh1 {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	border: 2rpx solid #eee;
+	border-radius: 50%;
+	animation-name: first;
+	animation-duration: 0.75s;
+	animation-iteration-count: infinite;
+}
+@keyframes first
+{
+	0% {width: 200rpx;height: 200rpx;}
+	100% {width: 100rpx;height: 100rpx;}
+}
+.dh2 {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	border: 2rpx solid #eee;
+	border-radius: 50%;
+	animation-name: second;
+	animation-duration: 0.75s;
+	animation-iteration-count: infinite;
+}
+@keyframes second
+{
+	0% {width: 90rpx;height: 90rpx;}
+	100% {width: 68rpx;height: 68rpx;}
+}
+.icon {
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+	width: 68rpx;
+	height: 68rpx;
+	border-radius: 50%;
+}
+.dh_voice {
+  width: 44rpx;
+  height: 68rpx;
+}
+.picker{
+  border-bottom: 2rpx solid #eee; 
+  padding:20rpx;
+  font-size: 26rpx;
+}
+.t_picker{
+  border: 2rpx solid #888888;
+  padding: 5rpx 20rpx;
+  border-radius: 4px;
+  color: #888888;
+}
+.jubao{
+  font-size: 14px;
+}
+.jubao input{
+  padding:10rpx 20rpx;
+  border:1px solid #f0f0f0;
+}

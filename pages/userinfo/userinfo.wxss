@@ -1,0 +1,49 @@
+page {
+  font-size: 30rpx;
+  color: #333;
+  font-family: 'PingFang-SC-Regular';
+  overflow: hidden;
+}
+.content {
+  position: relative;
+  margin-top: 20rpx;
+  border-top: 2rpx solid #eee;
+  border-bottom: 2rpx solid #eee;
+}
+.header {
+  position: relative;
+  line-height: 150rpx;
+  height: 150rpx;
+  background-color: #fff;
+  padding: 0 20rpx;
+}
+.b_line {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 730rpx;
+  height: 2rpx;
+  background-color: #eee;
+}
+.headimgurl {
+  position: absolute;
+  top: 25rpx;
+  right: 20rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border: 1rpx solid #eee;
+  border-radius: 50%;
+}
+.info {
+  position: relative;
+  line-height: 100rpx;
+  height: 100rpx;
+  background-color: #fff;
+  padding: 0 20rpx;
+}
+.value {
+  position: absolute;
+  right: 20rpx;
+  font-size: 28rpx;
+  color: #8b8b8b;
+}

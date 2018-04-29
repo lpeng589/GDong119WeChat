@@ -1,0 +1,18 @@
+<view class="mask {{other}}" bindtap="pichide">
+<image src="https://d.pnkoo.cn/images/qinzhou.jpg" class="showimg" style="width:90%;height:100%;"></image>
+</view>
+<canvas canvas-id="canvas" class="canvas" class="absolute">
+    <view class="tip"><text class=""> 119报警须知：
+            1、如遇紧急情况，请长按下方按钮进行报警；
+            2、报警连线成功后尽可能提供详尽信息；
+            3、乱报警、假报警属扰乱治安行为。</text>
+
+            
+    </view>
+   
+    <view bindtouchstart="start" class="m" bindtouchend="end">
+        <image src="../../image/{{baojing}}" class="img"></image>
+        <view class="center">长按报警</view>
+    </view>
+  
+</canvas>

@@ -1,0 +1,191 @@
+.state {
+  position: relative;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #fff;
+  font-size: 35rpx;
+  color: #333;
+  padding: 0 20rpx;
+  font-family: 'PingFang-SC-Regular';
+  border-bottom: 1rpx solid #eee;
+}
+.treated {
+  position: absolute;
+  right: 20rpx;
+  color: #008B45;
+  font-size: 30rpx;
+}
+.untreated {
+  position: absolute;
+  right: 20rpx;
+  color: #a50000;
+  font-size: 30rpx;
+}
+.paly_audio {
+  background-color: #a91c1c;
+}
+.top {
+  position: relative;
+  height: 100rpx;
+  padding: 0 20rpx;
+  background-color: #fff;
+}
+.user_icon {
+  float:left;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 10rpx;
+  margin: 19rpx 20rpx 19rpx 0;
+  border: 1rpx solid #eee;
+}
+.top_content {
+  float:left;
+  max-width: 620rpx;
+  font-size: 22rpx;
+  color: #888;
+  font-family: 'PingFang-SC-Medium';
+  
+}
+.phone {
+  float:left;
+  width: 600rpx;
+  margin-top: 20rpx;
+  font-size: 26rpx;
+  color: #333;
+  font-family: 'PingFang-SC-Regular';
+}
+.icon_time {
+  float:left;
+  width: 24rpx;
+  height: 24rpx;
+  margin: 8rpx 10rpx 0 0;
+}
+.icon_address {
+  float:left;
+  width: 26rpx;
+  height: 32rpx;
+  margin-right: 10rpx;
+}
+.top_value {
+  float:left;
+  margin: 10rpx 10rpx 0 0;
+}
+.top_address {
+  margin: 10rpx 0 0 0;
+  max-width: 420rpx;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.middle {
+  position: relative;
+  padding: 0 20rpx;
+  background-color: #fff;
+  display: flex;
+  width: 710rpx;
+  justify-content: flex-start;
+}
+.m_image {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 10rpx;
+  margin-right: 30rpx;
+}
+.audio {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 10rpx;
+  margin-right: 30rpx;
+  display:inline-block;
+  background-color: #333;
+}
+.play_audio {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 10rpx;
+  margin-right: 30rpx;
+  display:inline-block;
+  background-color: #a91c1c;
+}
+.icon_audio {
+  width: 66rpx;
+  height: 102rpx;
+  margin: 14rpx 32rpx;
+}
+.m_content {
+  position: relative;
+  font-size: 26rpx;
+  color: #585858;
+  font-family: 'PingFang-SC-Regular';
+  padding: 20rpx;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+.reply {
+  position: relative;
+  font-size: 26rpx;
+  color: #585858;
+  font-family: 'PingFang-SC-Regular';
+  padding: 20rpx;
+  background-color: #fff;
+}
+.video {
+  position: relative;
+  width:710rpx;
+  margin:20rpx;
+}
+.hide {
+  display: none;
+}
+.box {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 10rpx;
+  margin-right: 30rpx;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+  background-color: #333;
+}
+.dh1 {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	border: 2rpx solid #eee;
+	border-radius: 50%;
+	animation-name: first;
+	animation-duration: 0.75s;
+	animation-iteration-count: infinite;
+}
+@keyframes first
+{
+	0% {width: 120rpx;height: 120rpx;}
+	100% {width: 80rpx;height: 80rpx;}
+}
+.dh2 {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	border: 2rpx solid #eee;
+	border-radius: 50%;
+	animation-name: second;
+	animation-duration: 0.75s;
+	animation-iteration-count: infinite;
+}
+@keyframes second
+{
+	0% {width: 70rpx;height: 70rpx;}
+	100% {width: 34rpx;height: 34rpx;}
+}
+.icon {
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+	width: 34rpx;
+	height: 34rpx;
+	border-radius: 50%;
+}
+.dh_voice {
+  width: 22rpx;
+  height: 34rpx;
+}

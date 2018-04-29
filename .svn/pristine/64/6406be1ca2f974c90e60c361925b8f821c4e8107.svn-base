@@ -1,0 +1,12 @@
+<view class="user">
+  <image class="user_image" src="{{user.headimgurl}}"  mode="aspectFit" bindtap="userinfo"></image>
+  <view class="user_name">{{user.name}}</view>
+  <view wx:if="{{user.state == '1'}}" class="auth_icon">已认证</view>
+  <view wx:else class="n_auth_icon">未认证</view>
+</view>
+<view class="auth" bindtap="userauth">
+  实名认证
+  <text wx:if="{{user.state == '1'}}" class="auth_text">认证已完成</text>
+  <image class="icon_next" src="../../image/pat/arrowright.png" mode="aspectFit"></image>
+</view>
+<view class="copyright">深圳市科荣软件股份有限公司 版权所有</view>

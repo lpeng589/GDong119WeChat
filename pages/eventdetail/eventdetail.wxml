@@ -1,0 +1,62 @@
+<view style="background-color: #fff;">
+  <view class="state">
+    状态:    
+    <text wx:if="{{data.status == '0'}}" class="untreated">未处理</text>
+    <text wx:else class="treated">已处理</text>
+  </view>
+  <view class="top">
+    <image class="user_icon" src="{{data.headimgurl}}" mode="aspectFill"></image>
+    <view class="phone">{{data.phone}}</view>
+    <view class="top_content">
+        <image class="icon_time" src="../../image/pat/clock.png" mode="aspectFill"></image>
+        <view class="top_value top_time">{{data.inserttime2}}</view>
+        <image class="icon_address" src="../../image/pat/map.png" mode="aspectFill"></image>
+        <view class="top_value top_address">{{data.address}}</view>
+        <view>类型：
+        <text wx:if="{{data.type==1}}" class="top_time">无消防手续</text>
+        <text wx:if="{{data.type==2}}" class="top_time">安全出口数量不足</text>
+        <text wx:if="{{data.type==3}}" class="top_time">安全出口、疏散通道被占用、堵塞</text>
+        <text wx:if="{{data.type==4}}" class="top_time">消防车通道被占用、堵塞</text>
+        <text wx:if="{{data.type==5}}" class="top_time">消防设施器材损坏</text>
+        <text wx:if="{{data.type==6}}" class="top_time">外墙门窗上设置影响逃生、灭火救援的障碍物</text>
+        <text wx:if="{{data.type==7}}" class="top_time">消防产品不合格</text>
+        <text wx:if="{{data.type==8}}" class="top_time">燃气、电气线路数设不安全</text>
+        <text wx:if="{{data.type==9}}" class="top_time">违章动火</text>
+        <text wx:if="{{data.type==10}}" class="top_time">违规存储易燃易爆危险品</text>
+        <text wx:if="{{data.type==11}}" class="top_time">其它消防违法行为和火灾隐患</text> 
+        </view>
+               
+                <block wx:if="{{data.jubao != ''}}"> 
+        <view class="top_value top_address">举报对象：{{data.jubao}}</view>
+              </block> 
+
+
+           
+      </view>
+  </view>
+  <view class="middle">
+    <image wx:if="{{data.pic1}}" class="m_image" src="{{data.pic1}}" mode="aspectFill" data-url="{{data.pic1}}" bindtap="showimgurl"></image>
+    <image wx:if="{{data.pic2}}" class="m_image" src="{{data.pic2}}" mode="aspectFill" data-url="{{data.pic2}}" bindtap="showimgurl"></image>
+    <image wx:if="{{data.pic3}}" class="m_image" src="{{data.pic3}}" mode="aspectFill" data-url="{{data.pic3}}" bindtap="showimgurl"></image>
+    <view wx:if="{{data.voice}}">
+      <view wx:if="{{!isplay}}" class="audio">
+        <image class="icon_audio" bindtap="playaudio" src="../../image/pat/voice.png" mode="aspectFill"></image>
+      </view>
+      <view wx:else class="box" bindtap="stopaudio">
+        <view class="dh1">
+          <view class="dh2">
+            <view class="icon">
+              <image class="dh_voice" mode="scaleToFill" src="../../image/pat/voice.png"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="m_content">{{data.content}}</view>
+  <video id="myvideo" wx:if="{{data.video}}" class="video" src="{{data.video}}"></video>
+  <block wx:if="{{data.status != '0'}}"> 
+    <view class="state">处理结果</view>
+    <view class="reply">{{data.reply}}</view>
+  </block> 
+</view>
